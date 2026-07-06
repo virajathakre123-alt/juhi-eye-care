@@ -1,0 +1,33 @@
+/* Settings index list styles */
+.settings-list { display:flex;flex-direction:column;gap:8px; }
+.settings-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px;
+	border-radius: 10px;
+	border: 1px solid var(--admin-border);
+	background: var(--admin-surface);
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	text-align: left;
+}
+.settings-item > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 0;
+}
+.settings-item h3 {
+	margin: 0;
+	font-size: 1rem;
+	text-align: left;
+}
+.settings-item p {
+	margin: 0;
+	color: var(--admin-muted);
+	font-size: 0.95rem;
+}
+.settings-arrow { font-size:1.2rem; color:var(--admin-muted) }
+@media (max-width:767px){ .settings-item{padding:12px} }

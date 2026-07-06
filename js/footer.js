@@ -1,0 +1,128 @@
+const footerMarkup = `
+<footer class="site-footer" aria-labelledby="site-footer-title">
+  <div class="site-footer__panel">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="site-footer__brand-link" href="index.html" aria-label="Dr. Juhi Dhokne home">
+            <span class="site-footer__logo-wrap" aria-hidden="true">
+              <img src="assets/images/figma-logo.png" alt="">
+            </span>
+            <span class="site-footer__brand-copy">
+              <span id="site-footer-title" class="site-footer__name">Dr. Juhi Dhokne</span>
+              <span class="site-footer__role">Cornea &amp; Refractive Surgeon</span>
+            </span>
+          </a>
+
+          <p class="site-footer__summary">
+            Providing advanced, compassionate eye care with a focus on clarity,
+            comfort and long-term vision health.
+          </p>
+
+          <ul class="site-footer__contact-list" aria-label="Clinic contact details">
+            <li>
+              <span class="site-footer__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.5 4.75h7a1.75 1.75 0 0 1 1.75 1.75v11a1.75 1.75 0 0 1-1.75 1.75h-7A1.75 1.75 0 0 1 6.75 17.5v-11A1.75 1.75 0 0 1 8.5 4.75Z"></path>
+                  <path d="M10 18h4"></path>
+                </svg>
+              </span>
+              <a href="tel:+910000000000">+91 XXXXX XXXXX</a>
+            </li>
+            <li>
+              <span class="site-footer__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4.75 7.5 12 12.5l7.25-5"></path>
+                  <rect x="4.75" y="5.75" width="14.5" height="12.5" rx="2.2"></rect>
+                </svg>
+              </span>
+              <a href="mailto:clinic@email.com">clinic@email.com</a>
+            </li>
+            <li>
+              <span class="site-footer__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 21s5.25-5.03 5.25-10.25a5.25 5.25 0 1 0-10.5 0C6.75 15.97 12 21 12 21Z"></path>
+                  <circle cx="12" cy="10.75" r="1.75"></circle>
+                </svg>
+              </span>
+              <span>Ahmednagar, Maharashtra, India</span>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Quick links">
+          <h2>Quick Links</h2>
+          <ul class="site-footer__link-list">
+            <li><a href="index.html">Home <span aria-hidden="true">›</span></a></li>
+            <li><a href="about.html">About <span aria-hidden="true">›</span></a></li>
+            <li><a href="treatments.html">Treatments <span aria-hidden="true">›</span></a></li>
+            <li><a href="gallery.html">Gallery <span aria-hidden="true">›</span></a></li>
+            <li><a href="testimonials.html">Testimonials <span aria-hidden="true">›</span></a></li>
+            <li><a href="faq.html">FAQ <span aria-hidden="true">›</span></a></li>
+            <li><a href="contact.html">Contact <span aria-hidden="true">›</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__legal" aria-label="Legal links">
+        <ul class="site-footer__legal-list">
+          <li class="site-footer__legal-item">
+            <span class="site-footer__legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3.75 19.25 6.5v4.55c0 4.38-2.8 8.42-7.25 9.95-4.45-1.53-7.25-5.57-7.25-9.95V6.5L12 3.75Z"></path>
+                <path d="m9.5 12.1 1.8 1.85 3.2-3.35"></path>
+              </svg>
+            </span>
+            <a href="#" class="site-footer__legal-link">
+              <span class="site-footer__legal-label">Patient Privacy Policy</span>
+            </a>
+          </li>
+          <li class="site-footer__legal-item">
+            <span class="site-footer__legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6.5 4.75h6.7l4.05 4.05V19.25H6.5z"></path>
+                <path d="M13.2 4.75v4.05h4.05"></path>
+                <path d="M9 13h6"></path>
+                <path d="M9 16h6"></path>
+              </svg>
+            </span>
+            <a href="#" class="site-footer__legal-link">
+              <span class="site-footer__legal-label">Terms of Use</span>
+            </a>
+          </li>
+          <li class="site-footer__legal-item">
+            <span class="site-footer__legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="5" width="14" height="14" rx="2.5"></rect>
+                <path d="M12 8.5v7"></path>
+                <path d="M8.5 12h7"></path>
+              </svg>
+            </span>
+            <a href="#" class="site-footer__legal-link">
+              <span class="site-footer__legal-label">Medical Disclaimer</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__bar">
+    <div class="site-footer__inner site-footer__bar-inner">
+      <p>© 2026 Dr. Juhi Dhokne. All rights reserved.</p>
+      <a class="site-footer__admin" href="admin/login.html">
+        <span>Admin</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"></path>
+          <path d="M5.75 19.5a6.25 6.25 0 0 1 12.5 0"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>`;
+
+const footerSlots = document.querySelectorAll("[data-footer-include]");
+
+footerSlots.forEach((slot) => {
+  slot.innerHTML = footerMarkup;
+});

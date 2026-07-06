@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings | Juhi Eye Care Admin</title>
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-settings.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/settings.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link is-active" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html" data-logout>Logout</a>
+      </nav>
+      <div class="admin-sidebar__footer">Settings for the clinic</div>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+                    <div>
+            <h1>Settings</h1>
+            <p class="admin-muted">Clinic and appointment settings</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <section class="admin-card admin-list-card">
+            <nav class="settings-list">
+              <a class="settings-item" href="clinic-settings.html">
+                <div>
+                  <h3>Clinic Information</h3>
+                  <p class="admin-muted">Name, address and contact details</p>
+                </div>
+                <div class="settings-arrow">→</div>
+              </a>
+
+              <a class="settings-item" href="doctor-profile.html">
+                <div>
+                  <h3>Profile Settings</h3>
+                  <p class="admin-muted">Manage doctor profile, treatments & gallery</p>
+                </div>
+                <div class="settings-arrow">→</div>
+              </a>
+
+              <button class="settings-item" type="button" data-logout>
+                <div>
+                  <h3>Logout</h3>
+                  <p class="admin-muted">Sign out of the admin panel</p>
+                </div>
+                <div class="settings-arrow">→</div>
+              </button>
+            </nav>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

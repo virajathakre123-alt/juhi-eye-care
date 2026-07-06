@@ -1,0 +1,272 @@
+/* Appointment page */
+.appointment-section {
+  padding: 2rem 0 2.4rem;
+  /* reduce page-side padding so layout matches original Figma width */
+  padding-inline: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.appointment-container {
+  /* content width closer to original Figma: allow comfortable calendar width */
+  width: min(100% - 2rem, 720px);
+  margin-inline: auto;
+}
+
+.appointment-heading h1 {
+  margin: 0 0 2rem;
+  color: #111111;
+  font-size: 1.95rem; /* restored original page title size */
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.appointment-form {
+  display: grid;
+  gap: 1.6rem; /* slightly larger gap between calendar and pickers */
+}
+
+.appointment-stack {
+  display: grid;
+  gap: 1.4rem; /* more breathing room between selector blocks */
+}
+
+.appointment-panel,
+.appointment-picker-card {
+  border: 1px solid #0b79c9;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.appointment-panel__header h2,
+.appointment-picker-card h2,
+.appointment-picker-card__row label {
+  margin: 1rem 1.3rem 2rem;
+  color: #111111;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.appointment-panel__header {
+  margin-bottom: 0.65rem;
+}
+
+
+
+.appointment-calendar {
+  padding: 1.2rem 1rem 1.2rem; /* more breathing room inside calendar */
+}
+
+.appointment-calendar__toolbar {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.appointment-calendar__nav {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #0b79c9;
+  font-size: 1.5rem;
+}
+
+.appointment-calendar__month {
+  margin: 0;
+  color: #111111;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.appointment-calendar__weekdays,
+.appointment-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.7rem 0.4rem; /* slightly larger gaps for readability */
+}
+
+.appointment-calendar__weekdays {
+  margin-bottom: 0.95rem;
+}
+
+.appointment-calendar__weekdays span,
+.appointment-calendar__day,
+.appointment-calendar__empty {
+  display: grid;
+  min-height: 40px; /* give calendar cells more vertical space */
+  place-items: center;
+  font-size: 0.78rem;
+}
+
+.appointment-calendar__weekdays span {
+  color: #343434;
+}
+
+.appointment-calendar__day {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #222222;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+
+
+.appointment-calendar__day.is-selected {
+  background: #0b79c9;
+  color: #ffffff;
+}
+
+.appointment-calendar__day.is-disabled {
+  color: #2c2c2c;
+  opacity: 0.95;
+}
+
+.appointment-calendar__day:hover:not(:disabled),
+.appointment-calendar__day:focus-visible {
+  transform: translateY(-1px);
+}
+
+.appointment-picker-card {
+  padding: 1rem 1rem;
+}
+
+.appointment-picker-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.appointment-picker-card__row label {
+  margin: 0;
+}
+
+.appointment-select-wrap {
+  position: relative;
+  min-width: 118px; /* reduced width to match design */
+}
+
+.appointment-select-wrap::after {
+  content: "⌄";
+  position: absolute;
+  top: 50%;
+  right: 0.6rem;
+  transform: translateY(-50%);
+  color: #111111;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.appointment-select-wrap select {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 0.82rem; /* slightly smaller to match design */
+  font-weight: 700;
+  padding: 0.5rem 1.6rem 0.5rem 0.6rem; /* reduced vertical padding */
+}
+
+.appointment-picker-card--time {
+  background: #edf8ff;
+}
+
+.appointment-picker-card--time h2 {
+  margin-bottom: 0.75rem; /* keep heading compact */
+}
+
+.appointment-slots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem; /* comfortable spacing between slots */
+}
+
+.appointment-slots-note {
+  margin: 0.6rem 0 0 0;
+  color: #5f7488;
+  font-size: 0.82rem;
+}
+
+.appointment-slot {
+  min-height: 36px;
+  border: 1px solid #7ab4df;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 0.55rem 0.5rem; /* slightly larger tap target */
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.appointment-slot.is-active {
+  background: #0b79c9;
+  color: #ffffff;
+  border-color: #0b79c9;
+}
+
+.appointment-slot:hover,
+.appointment-slot:focus-visible {
+  transform: translateY(-1px);
+}
+
+.appointment-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.appointment-field input,
+.appointment-field textarea {
+  width: 100%;
+  border: 1px solid #7ab4df;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+  font-size: 0.84rem;
+  padding: 1rem 1.05rem;
+}
+
+.appointment-field textarea {
+  min-height: 74px;
+  resize: vertical;
+}
+
+.appointment-field input::placeholder,
+.appointment-field textarea::placeholder {
+  color: #111111;
+  opacity: 1;
+}
+
+.appointment-submit {
+  min-height: 45px;
+  border: 0;
+  border-radius: 16px;
+  background: #0a76bb;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.appointment-submit:hover,
+.appointment-submit:focus-visible {
+  background: #0969a7;
+  transform: translateY(-1px);
+}
+
+.appointment-status {
+  margin: 0;
+}
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Juhi Eye Care</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <script src="../js/admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link is-active" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html">Logout</a>
+      </nav>
+      <div class="admin-sidebar__footer">Juhi Eye Care admin</div>
+    </aside>
+
+    <div class="admin-content">
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+
+          <!-- Dashboard header with date card -->
+          <div class="dashboard-header">
+            <div class="dashboard-header__left">
+              <h2 class="dashboard-title">Dashboard</h2>
+              <p class="dashboard-sub">Clinic overview and quick actions</p>
+            </div>
+            <div class="dashboard-header__right">
+              <div class="date-card">
+                <div class="date-card__day">21</div>
+                <div class="date-card__meta">Jan</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary dashboard cards (simplified for single-doctor clinic) -->
+          <section class="management-grid">
+            <article class="mg-card admin-card">
+              <h4>Today's Appointments</h4>
+              <p class="muted">Confirmed appointments scheduled for today.</p>
+              <div class="admin-row" style="margin-top:12px;">
+                <div class="admin-actions">
+                  <a class="admin-button admin-button--primary" href="appointments.html">View Appointments</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="mg-card admin-card">
+              <h4>Appointment Requests</h4>
+              <p class="muted">Pending requests submitted through the website.</p>
+              <div class="admin-row" style="margin-top:12px;">
+                <div class="admin-actions">
+                  <a class="admin-button admin-button--secondary" href="appointment-requests.html">Review Requests</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="mg-card admin-card">
+              <h4>Availability</h4>
+              <p class="muted">Manage available dates and time slots.</p>
+              <div class="admin-row" style="margin-top:12px;">
+                <div class="admin-actions"><a class="admin-button admin-button--primary" href="availability.html">Manage Availability</a></div>
+              </div>
+            </article>
+
+            <article class="mg-card admin-card">
+              <h4>Profile Management</h4>
+              <p class="muted">Update doctor introduction, image, qualifications, treatments & gallery.</p>
+              <div class="admin-row" style="margin-top:12px;"><div class="admin-actions"><a class="admin-button admin-button--secondary" href="doctor-profile.html">Edit Profile</a></div></div>
+            </article>
+
+            <article class="mg-card admin-card">
+              <h4>Settings</h4>
+              <p class="muted">Clinic and appointment rules, notifications.</p>
+              <div class="admin-row" style="margin-top:12px;"><div class="admin-actions"><a class="admin-button admin-button--secondary" href="settings.html">Open Settings</a></div></div>
+            </article>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

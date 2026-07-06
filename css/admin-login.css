@@ -1,0 +1,60 @@
+/* Page-specific styles for admin/login.html */
+
+.admin-login-page {}
+
+@media (max-width: 767px) {
+	.admin-login-page {
+		padding: 20px 12px;
+	}
+
+	.admin-login-card {
+		width: 100%;
+		border-radius: 14px;
+		padding: 20px;
+	}
+
+	.admin-input,
+	.admin-button {
+		min-height: 48px;
+	}
+
+	.admin-login-error {
+		margin-top: 12px;
+		color: #b00020;
+		font-weight: 500;
+	}
+}
+
+/* Password toggle styles */
+.admin-input-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.admin-input-wrap .admin-input {
+	padding-right: 44px;
+}
+
+.password-toggle {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	background: transparent;
+	padding: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: #6b7280;
+}
+
+.password-toggle:focus {
+	outline: 2px solid rgba(59,130,246,0.3);
+	border-radius: 4px;
+}
+
+.icon { display: block; }
+.icon.is-hidden { display: none; }

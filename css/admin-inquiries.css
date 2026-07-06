@@ -1,0 +1,129 @@
+@import url("admin-global.css");
+
+/* Appointment Requests Page Styles */
+.admin-topbar__title h1 {
+  margin: 0;
+  font-size: 1.65rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--admin-text);
+}
+
+.admin-topbar__title p {
+  margin: 6px 0 0;
+  color: var(--admin-muted);
+  font-size: 0.95rem;
+}
+
+/* Grid layout for request cards */
+.grid--2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Request card styling */
+.card.request {
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(36, 86, 119, 0.06);
+  display: grid;
+  gap: 12px;
+}
+
+.card.request .status {
+  display: inline-block;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: rgba(184, 120, 8, 0.12);
+  color: var(--admin-warning);
+  width: fit-content;
+}
+
+.card.request .status.accepted {
+  background: rgba(31, 143, 90, 0.12);
+  color: var(--admin-success);
+}
+
+.card.request .status.rejected {
+  background: rgba(201, 67, 67, 0.12);
+  color: var(--admin-danger);
+}
+
+.card.request h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--admin-text);
+}
+
+.card.request p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--admin-text);
+  line-height: 1.5;
+}
+
+.card.request strong {
+  font-weight: 700;
+  color: var(--admin-text);
+}
+
+.card.request em {
+  color: var(--admin-muted);
+  font-style: normal;
+}
+
+.card.request .admin-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Desktop layout adjustments */
+@media (min-width: 1024px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .card.request {
+    padding: 20px;
+  }
+}
+
+/* Mobile: stack inquiry cards and improve spacing */
+@media (max-width: 767px) {
+  .admin-topbar__title h1 {
+    font-size: 1.4rem;
+  }
+
+  .grid--2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card.request {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .card.request h2 {
+    font-size: 0.95rem;
+  }
+
+  .card.request p {
+    font-size: 0.9rem;
+  }
+
+  .status {
+    min-height: 28px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

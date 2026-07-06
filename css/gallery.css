@@ -1,0 +1,158 @@
+/* Gallery page */
+.about-page {
+  background: #ffffff;
+}
+
+.about-main {
+  background: #ffffff;
+}
+
+.about-container {
+  width: min(100% - 1.6rem, 395px);
+  margin-inline: auto;
+}
+
+.about-hero-band {
+  min-height: 150px;
+  background: #d1e9ff;
+  margin-top: 1.5rem;
+}
+
+.about-footer-panel {
+  margin-top: 1.6rem;
+}
+/* Treatment grid page */
+.treatment-grid-section {
+  padding: 1.5rem 0 2.8rem;
+  margin-top: 1rem;
+}
+
+.treatment-grid-container {
+  width: min(100% - 1.6rem, 395px);
+  margin-inline: auto;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 0.95rem;
+  justify-items: center;
+}
+
+.treatment-tile {
+  display: flex;
+  width: 100%;
+  min-height: 190px;
+  flex-direction: column;
+  gap: 0.55rem;
+  border-radius: 16px;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.treatment-tile:hover,
+.treatment-tile:focus-visible {
+  transform: translateY(-2px);
+}
+
+.treatment-tile__media {
+  flex: 1;
+  min-height: 150px;
+  border-radius: 6px;
+  border: 1px solid rgba(146, 196, 225, 0.22);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),
+    linear-gradient(90deg, transparent calc(50% - 2px), rgba(255, 255, 255, 0.96) calc(50% - 2px), rgba(255, 255, 255, 0.96) calc(50% + 2px), transparent calc(50% + 2px)),
+    linear-gradient(transparent calc(50% - 2px), rgba(255, 255, 255, 0.96) calc(50% - 2px), rgba(255, 255, 255, 0.96) calc(50% + 2px), transparent calc(50% + 2px)),
+    #dff0ff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.treatment-tile__title {
+  margin: 0;
+  color: #111111;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.treatment-tile__title span {
+  display: block;
+}
+
+/* Gallery page title styling */
+.gallery-page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .treatment-grid-container {
+    width: min(100% - 3rem, 880px);
+  }
+
+  .treatment-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Desktop refinements (1024px+) - Gallery page only */
+@media (min-width: 1024px) {
+  /* Make gallery title visible with balanced sizing */
+  .gallery-page-title {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    margin: 0 0 2.2rem 0;
+    color: #111111;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  /* Reduce banner height - no hero content needed */
+  .about-hero-band {
+    min-height: 80px;
+  }
+
+  /* Tighten section spacing */
+  .treatment-grid-section {
+    padding: 0.8rem 0 3rem;
+    margin-top: 0;
+  }
+
+  /* Increase container width for desktop */
+  .treatment-grid-container {
+    width: min(100% - 4rem, 1200px);
+  }
+
+  /* Improve grid layout and card sizing */
+  .treatment-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.8rem 1.2rem;
+    justify-items: center;
+  }
+
+  /* Increase gallery card size on desktop */
+  .treatment-tile {
+    min-height: 220px;
+  }
+
+  .treatment-tile__media {
+    min-height: 180px;
+  }
+
+  /* Enhance card text sizing for desktop */
+  .treatment-tile__title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}

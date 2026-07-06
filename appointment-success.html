@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmed | Juhi Eye Care</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/appointment-success.css">
+</head>
+<body class="about-page home-page appointment-success-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <div class="desktop-navbar-slot" data-navbar-include="navbar.html"></div>
+    <header class="site-header home-header">
+      <div class="home-container header-inner">
+        <a class="brand home-brand" href="index.html" aria-label="Dr. Juhi Dhokne home">
+          <span class="home-brand-mark" aria-hidden="true"></span>
+          <span>Dr. Juhi Dhokne</span>
+        </a>
+        <button class="nav-toggle home-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span></button>
+        <nav class="site-nav home-nav" aria-label="Primary navigation" data-site-nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-nav-link href="index.html">Home</a></li>
+            <li><a class="nav-link" data-nav-link href="about.html">About</a></li>
+            <li><a class="nav-link" data-nav-link href="gallery.html">Gallery</a></li>
+            <li><a class="nav-link" data-nav-link href="treatments.html">Treatment</a></li>
+            <li><a class="nav-link" data-nav-link href="testimonials.html">Patient Testimonial</a></li>
+            <li><a class="nav-link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+          <p class="home-nav-contact">Phone: +91 00000 00000<br>Email: clinic@email.com<br>Clinic Address: Ahmedabad</p>
+          <div class="home-menu-actions" aria-label="Menu quick actions">
+            <a class="home-pill" href="contact.html">Contact Us</a>
+            <a class="home-pill home-pill--primary" href="appointment.html">Book Appointment <span aria-hidden="true">→</span></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="about-main">
+      <section class="about-hero-band" aria-hidden="true"></section>
+
+      <section class="appointment-success-section" aria-labelledby="appointment-success-title">
+        <div class="home-container about-container appointment-success-container">
+          <article class="appointment-success-card" data-success-card>
+            <div class="appointment-success-card__icon-wrap" aria-hidden="true">
+              <div class="appointment-success-card__icon">
+                <span class="appointment-success-card__ring"></span>
+                <span class="appointment-success-card__check"></span>
+              </div>
+            </div>
+
+            <div class="appointment-success-card__content">
+              <h1 id="appointment-success-title">Thank you for your request!</h1>
+              <p class="appointment-success-card__meta">Welcome to Juhi Eye Care. Your appointment request has been sent to the doctor for review.</p>
+              <p class="appointment-success-card__doctor">We will notify you by email once your appointment is approved.</p>
+              <p class="appointment-success-card__address">If you need to make changes, please contact us.</p>
+            </div>
+          </article>
+
+          <button class="appointment-receipt-link" type="button" data-download-receipt>
+            <span>Download Appointment Receipt</span>
+            <span class="appointment-receipt-link__icon" aria-hidden="true">⇩</span>
+          </button>
+
+          <a class="appointment-success-home" href="index.html">Home</a>
+          <p class="form-status appointment-status" aria-live="polite" data-receipt-status></p>
+        </div>
+      </section>
+      <div data-footer-include="footer.html"></div>
+    </main>
+  </div>
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/appointment-success.js"></script>
+</body>
+</html>

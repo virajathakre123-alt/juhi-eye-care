@@ -1,0 +1,66 @@
+/* Page-specific styles for admin/gallery.html */
+
+.admin-gallery-page {}
+
+/* Upload zone moved to admin-global.css (shared) */
+
+.admin-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.admin-gallery-card {
+	background: var(--admin-surface);
+	border: 1px solid rgba(88, 117, 138, 0.12);
+	border-radius: 18px;
+	overflow: hidden;
+	display: grid;
+	gap: 0;
+}
+
+.admin-gallery-card__media {
+	aspect-ratio: 1 / 1;
+	background:
+		linear-gradient(135deg, rgba(0, 107, 169, 0.14), rgba(209, 233, 255, 0.88)),
+		radial-gradient(circle at top left, rgba(255, 255, 255, 0.92), transparent 36%);
+	display: grid;
+	place-items: center;
+	color: var(--admin-primary);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.admin-gallery-card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.admin-gallery-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.admin-gallery-card__media {
+		aspect-ratio: 16/9;
+	}
+}
+
+.admin-gallery-card__body {
+	padding: 14px;
+	display: grid;
+	gap: 10px;
+}
+
+.admin-gallery-card__title {
+	margin: 0;
+	font-size: 0.98rem;
+}
+
+.admin-gallery-card__caption {
+	color: var(--admin-muted);
+	font-size: 0.9rem;
+}

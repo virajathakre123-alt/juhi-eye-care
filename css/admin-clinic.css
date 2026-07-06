@@ -1,0 +1,6 @@
+/* Clinic settings page styles (mobile-first) */
+.admin-form-card { padding:14px }
+.admin-form-grid { display:grid; grid-template-columns:1fr; gap:12px }
+.admin-field label{ display:block; font-weight:600; margin-bottom:6px }
+.admin-input, .admin-textarea, .admin-select { width:100%; box-sizing:border-box }
+@media (min-width:720px){ .admin-form-grid{ grid-template-columns:1fr 1fr } .admin-field[style*="grid-column:1/-1"]{ grid-column:1/-1 } }

@@ -1,0 +1,6 @@
+/* Appointment settings styles */
+.admin-form-card { padding:14px }
+.admin-form-grid { display:grid; grid-template-columns:1fr; gap:12px }
+.admin-field label{ display:block; font-weight:600; margin-bottom:6px }
+.admin-input, .admin-textarea { width:100% }
+@media (min-width:720px){ .admin-form-grid{ grid-template-columns:1fr 1fr } }

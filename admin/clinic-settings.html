@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clinic Information | Juhi Eye Care Admin</title>
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-clinic.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/clinic-settings.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html" data-logout>Logout</a>
+      </nav>
+      <div class="admin-sidebar__Footer">Clinic information</div>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+                    <div>
+            <h1>Clinic Information</h1>
+            <p class="admin-muted">Update clinic contact and working days</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <form id="clinic-form" class="admin-card admin-form-card">
+            <div class="admin-form-grid">
+              <div class="admin-field"><label for="clinic-name">Clinic Name</label><input id="clinic-name" class="admin-input" type="text" value="Juhi Eye Care"></div>
+              <div class="admin-field"><label for="clinic-address">Clinic Address</label><textarea id="clinic-address" class="admin-textarea">123 Clinic Street, Pune, MH</textarea></div>
+              <div class="admin-field"><label for="clinic-phone">Contact Number</label><input id="clinic-phone" class="admin-input" type="text" value="+91 90000 00000"></div>
+              <div class="admin-field"><label for="clinic-whatsapp">WhatsApp Number</label><input id="clinic-whatsapp" class="admin-input" type="text" value="+91 90000 00000"></div>
+              <div class="admin-field"><label for="clinic-email">Email Address</label><input id="clinic-email" class="admin-input" type="email" value="info@juhieyecare.com"></div>
+
+              <div class="admin-field" style="grid-column:1/-1;">
+                <label>Working Days</label>
+                <div class="admin-row" style="flex-wrap:wrap;gap:8px;">
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="monday"> Monday</label>
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="tuesday"> Tuesday</label>
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="wednesday"> Wednesday</label>
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="thursday"> Thursday</label>
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="friday"> Friday</label>
+                  <label class="admin-list-item"><input type="checkbox" checked data-day value="saturday"> Saturday</label>
+                  <label class="admin-list-item"><input type="checkbox" data-day value="sunday"> Sunday</label>
+                </div>
+              </div>
+
+              <div class="admin-field"><label for="clinic-start">Start Time</label><input id="clinic-start" class="admin-input" type="time" value="09:00"></div>
+              <div class="admin-field"><label for="clinic-end">End Time</label><input id="clinic-end" class="admin-input" type="time" value="17:00"></div>
+            </div>
+
+            <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px;">
+              <button type="button" id="save-clinic" class="admin-button admin-button--primary">Save Clinic Information</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

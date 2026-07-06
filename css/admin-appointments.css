@@ -1,0 +1,28 @@
+@import url("admin-global.css");
+
+/* Mobile: convert appointments table into stacked cards */
+@media (max-width: 767px) {
+	.table-wrap { overflow: visible; }
+	.data-table thead { display: none; }
+	.data-table tbody tr {
+		display: block;
+		margin-bottom: 12px;
+		border-radius: 12px;
+		padding: 10px;
+		background: var(--admin-surface);
+		border: 1px solid rgba(88,117,138,0.08);
+	}
+
+	.data-table td {
+		display: flex;
+		justify-content: space-between;
+		padding: 6px 0;
+		border: none;
+	}
+
+	.data-table td:nth-child(1)::before { content: "Date"; color: var(--admin-muted); margin-right: 8px; }
+	.data-table td:nth-child(2)::before { content: "Patient"; color: var(--admin-muted); margin-right: 8px; }
+	.data-table td:nth-child(3)::before { content: "Phone"; color: var(--admin-muted); margin-right: 8px; }
+	.data-table td:nth-child(4)::before { content: "Reason"; color: var(--admin-muted); margin-right: 8px; }
+	.data-table td:nth-child(5)::before { content: "Status"; color: var(--admin-muted); margin-right: 8px; }
+}

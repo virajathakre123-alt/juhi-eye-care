@@ -1,0 +1,115 @@
+@media (min-width: 680px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .trust-strip,
+  .grid--2,
+  .field-grid,
+  .stat-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .doctor-panel {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .quote {
+    padding: 1.8rem;
+  }
+}
+
+@media (min-width: 920px) {
+  .nav-toggle,
+  .home-nav-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .home-nav {
+    position: static;
+    display: block;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.65rem 0.82rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-link--cta {
+    margin-left: 0.35rem;
+    background: var(--blue-900);
+    color: #fff;
+  }
+
+  .nav-link--cta:hover,
+  .nav-link--cta.is-active {
+    background: #075e91;
+    color: #fff;
+  }
+
+  .hero-grid,
+  .split {
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  }
+
+  .hero-card {
+    min-height: 520px;
+  }
+
+  .trust-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .admin-layout {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .admin-sidebar {
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+
+  .admin-main {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1180px) {
+  .nav-link {
+    padding-inline: 1rem;
+  }
+}

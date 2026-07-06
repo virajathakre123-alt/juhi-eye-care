@@ -1,0 +1,73 @@
+@import url("admin-global.css");
+
+/* Availability page: calendar and slots */
+.admin-calendar {
+	display: grid;
+	gap: 12px;
+}
+
+.admin-calendar__toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.admin-calendar__month {
+	font-weight: 700;
+	font-size: 1.05rem;
+}
+
+.admin-calendar__grid {
+	display: grid;
+	grid-template-columns: repeat(7, minmax(0, 1fr));
+	gap: 8px;
+}
+
+.admin-calendar__day,
+.admin-slot {
+	min-height: 42px;
+	border-radius: 12px;
+	border: 1px solid var(--admin-border);
+	background: var(--admin-surface-soft);
+	display: grid;
+	place-items: center;
+	font-size: 0.95rem;
+}
+
+.admin-calendar__day.is-selected,
+.admin-slot.is-selected {
+	background: var(--admin-primary);
+	color: #fff;
+	border-color: var(--admin-primary);
+}
+
+.admin-calendar__day.is-muted {
+	color: rgba(23, 48, 67, 0.4);
+}
+
+.admin-slots {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+}
+
+@media (max-width: 767px) {
+	.admin-calendar__grid {
+		grid-template-columns: repeat(7, 1fr);
+		gap: 6px;
+	}
+
+	.admin-calendar__day,
+	.admin-slot {
+		min-height: 44px;
+		border-radius: 10px;
+		font-size: 0.95rem;
+	}
+
+	.admin-slots {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 8px;
+	}
+}
+

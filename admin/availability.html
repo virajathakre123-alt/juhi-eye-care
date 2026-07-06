@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Availability | Juhi Eye Care Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-availability.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/availability.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link is-active" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html">Logout</a>
+      </nav>
+      <div class="admin-sidebar__footer">Set clinic dates and bookable slots.</div>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+                    <div>
+            <h1>Doctor Availability</h1>
+            <p>Choose a date and manage the open slots for each clinic session.</p>
+          </div>
+        </div>
+        <div class="admin-topbar__actions">
+          <button class="admin-button admin-button--secondary" type="button">Reset day</button>
+          <button class="admin-button admin-button--primary" type="button">Save changes</button>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <section class="admin-two-up">
+            <article class="admin-card">
+              <div class="admin-section-header">
+                <div><h3>Calendar</h3><p>Select the day you want to edit.</p></div>
+              </div>
+              <div class="admin-calendar">
+                <div class="admin-calendar__toolbar">
+                  <button class="admin-mini-button" type="button">←</button>
+                  <div class="admin-calendar__month">May 2026</div>
+                  <button class="admin-mini-button" type="button">→</button>
+                </div>
+                <div class="admin-calendar__grid">
+                  <div class="admin-muted">Sun</div><div class="admin-muted">Mon</div><div class="admin-muted">Tue</div><div class="admin-muted">Wed</div><div class="admin-muted">Thu</div><div class="admin-muted">Fri</div><div class="admin-muted">Sat</div>
+                  <button class="admin-calendar__day is-muted" type="button"> </button>
+                  <button class="admin-calendar__day" type="button" data-calendar-day data-date="02 May">2</button>
+                  <button class="admin-calendar__day" type="button" data-calendar-day data-date="03 May">3</button>
+                  <button class="admin-calendar__day is-selected" type="button" data-calendar-day data-date="04 May">4</button>
+                  <button class="admin-calendar__day" type="button" data-calendar-day data-date="05 May">5</button>
+                  <button class="admin-calendar__day" type="button" data-calendar-day data-date="06 May">6</button>
+                  <button class="admin-calendar__day" type="button" data-calendar-day data-date="07 May">7</button>
+                </div>
+                <div class="admin-empty">Selected date: <strong data-selected-date>04 May</strong></div>
+              </div>
+            </article>
+
+            <article class="admin-card">
+              <div class="admin-section-header">
+                <div><h3>Available slots</h3><p>Tap a slot to open or close it.</p></div>
+              </div>
+              <div class="admin-slots">
+                <button class="admin-slot is-selected" type="button" data-slot>09:00 AM</button>
+                <button class="admin-slot is-selected" type="button" data-slot>09:30 AM</button>
+                <button class="admin-slot" type="button" data-slot>10:00 AM</button>
+                <button class="admin-slot" type="button" data-slot>10:30 AM</button>
+                <button class="admin-slot is-selected" type="button" data-slot>11:00 AM</button>
+                <button class="admin-slot" type="button" data-slot>11:30 AM</button>
+                <button class="admin-slot" type="button" data-slot>04:00 PM</button>
+                <button class="admin-slot" type="button" data-slot>04:30 PM</button>
+              </div>
+            </article>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

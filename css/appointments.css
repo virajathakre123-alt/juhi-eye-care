@@ -1,0 +1,97 @@
+/* Page-specific styles for Today's Appointments */
+@import url("admin-global.css");
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+}
+.search-wrap .search-icon {
+  background: transparent;
+  border: none;
+  margin-left: -40px;
+  pointer-events: none;
+}
+
+/* Status badges override for appointments */
+.admin-badge--confirmed { background: rgba(0,107,169,0.12); color: var(--admin-primary); }
+.admin-badge--completed { background: rgba(31,143,90,0.12); color: var(--admin-success); }
+.admin-badge--cancelled { background: rgba(201,67,67,0.12); color: var(--admin-danger); }
+
+/* Drawer / bottom sheet */
+.appt-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 420px;
+  background: var(--admin-surface);
+  border-left: 1px solid var(--admin-border);
+  box-shadow: 0 30px 60px rgba(36,86,119,0.12);
+  transform: translateX(110%);
+  transition: transform 240ms ease;
+  z-index: 1200;
+}
+.appt-drawer[aria-hidden="false"] { transform: translateX(0); }
+.appt-drawer .drawer-inner { padding: 18px; display: grid; gap: 12px; }
+.appt-drawer .drawer-close { position: absolute; left: 8px; top: 8px; border: none; background: transparent; font-size: 22px; }
+.drawer-meta { display: grid; gap: 8px; }
+.drawer-section { margin-top: 6px; }
+.drawer-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+/* Mobile: bottom sheet style and card stack */
+@media (max-width: 767px) {
+  .appt-drawer { left: 0; right: 0; bottom: 0; top: auto; height: auto; width: 100%; border-left: none; border-top: 1px solid var(--admin-border); border-radius: 12px 12px 0 0; transform: translateY(110%); }
+  .appt-drawer[aria-hidden="false"] { transform: translateY(0); }
+  .appt-drawer .drawer-close { right: 12px; left: auto; }
+
+  /* Convert table rows to cards (admin-appointments.css also helps) */
+  .data-table tbody tr { display: block; margin-bottom: 12px; border-radius: 12px; padding: 12px; background: var(--admin-surface); border: 1px solid rgba(88,117,138,0.08); }
+  .data-table td { display: block; padding: 6px 0; }
+  .data-table td:nth-child(1)::before { content: "Time:"; font-weight:700; margin-right:8px; }
+}
+
+/* Small layout helpers */
+.ml-8 { margin-left: 8px; }
+
+/* Table improvements for desktop */
+@media (min-width: 768px) {
+  .data-table th, .data-table td { padding: 12px 16px; }
+  .data-table td:last-child { text-align: center; }
+}
+
+/* Overlay for drawer/modal */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,20,30,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+  z-index: 1100;
+}
+.drawer-overlay[aria-hidden="false"] { opacity: 1; pointer-events: auto; }
+
+/* Card styles (mobile) */
+.data-table tbody tr {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.data-table tbody tr:active { transform: translateY(2px); }
+.data-table tbody tr:hover { box-shadow: 0 8px 20px rgba(36,86,119,0.06); }
+
+/* Animations */
+@keyframes drawer-slide-up { from { transform: translateY(20px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+@keyframes drawer-slide-in { from { transform: translateX(20px); opacity: 0 } to { transform: translateX(0); opacity: 1 } }
+.appt-drawer[aria-hidden="false"] .drawer-inner { animation: drawer-slide-in 260ms cubic-bezier(.2,.9,.2,1); }
+
+/* Spacing tweaks */
+.admin-page-main { padding: 18px 12px 28px; }
+.admin-container { gap: 16px; }
+
+/* Improve search input spacing */
+.search-wrap { position: relative; }
+.search-wrap input { padding-right: 44px; }
+.search-wrap .search-icon { position: absolute; right: 12px; font-size: 14px; opacity: 0.6; pointer-events: none; }
+
+/* View button style on mobile */
+.admin-mini-button { min-width: 88px; }
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Juhi Eye Care Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-gallery.css">
+  <script src="../js/admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html">Logout</a>
+      </nav>
+      <div class="admin-sidebar__footer">Upload and manage clinic gallery images.</div>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+                    <div>
+            <h1>Gallery Management</h1>
+            <p>Upload, preview, and delete clinic images from a responsive grid.</p>
+          </div>
+        </div>
+        <div class="admin-topbar__actions">
+          <button class="admin-button admin-button--secondary" type="button">Sort</button>
+          <button class="admin-button admin-button--primary" type="button">Publish</button>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <section class="admin-hero">
+            <h2>A calm image grid for clinic gallery updates.</h2>
+            <p>Images stay easy to scan on small screens, and staff can add or remove cards without breaking layout.</p>
+          </section>
+
+          <section class="admin-two-up">
+            <article class="admin-card admin-upload-zone">
+              <h3 class="admin-upload-zone__title">Upload gallery images</h3>
+              <p class="admin-upload-zone__copy">Select one or more clinic images. New previews appear below immediately.</p>
+              <input type="file" accept="image/*" multiple data-gallery-upload />
+              <div class="admin-toolbar">
+                <button class="admin-chip is-active" type="button">All images</button>
+                <button class="admin-chip" type="button">Clinic</button>
+                <button class="admin-chip" type="button">Equipment</button>
+                <button class="admin-chip" type="button">Interiors</button>
+              </div>
+            </article>
+
+            <article class="admin-card">
+              <div class="admin-section-header">
+                <div><h3>Gallery notes</h3><p>Quick guidance for the content team.</p></div>
+              </div>
+              <div class="admin-checklist">
+                <div class="admin-checklist__item">Use clear, bright clinic images.</div>
+                <div class="admin-checklist__item">Keep the gallery balanced between interiors and equipment.</div>
+                <div class="admin-checklist__item">Remove outdated or low-quality images promptly.</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="admin-section">
+            <div class="admin-section-header">
+              <div><h3>Current gallery previews</h3><p>Tap delete to remove any card from the public gallery.</p></div>
+            </div>
+            <div class="admin-gallery-grid" data-gallery-grid>
+              <article class="admin-gallery-card" data-removable-card>
+                <div class="admin-gallery-card__media">Photo</div>
+                <div class="admin-gallery-card__body">
+                  <div>
+                    <h4 class="admin-gallery-card__title">Clinic interior</h4>
+                    <div class="admin-gallery-card__caption">Featured image</div>
+                  </div>
+                  <div class="admin-actions">
+                    <button class="admin-mini-button admin-mini-button--danger" type="button" data-remove-card>Delete</button>
+                  </div>
+                </div>
+              </article>
+              <article class="admin-gallery-card" data-removable-card>
+                <div class="admin-gallery-card__media">Photo</div>
+                <div class="admin-gallery-card__body">
+                  <div>
+                    <h4 class="admin-gallery-card__title">Doctor consultation area</h4>
+                    <div class="admin-gallery-card__caption">Gallery card</div>
+                  </div>
+                  <div class="admin-actions">
+                    <button class="admin-mini-button admin-mini-button--danger" type="button" data-remove-card>Delete</button>
+                  </div>
+                </div>
+              </article>
+              <article class="admin-gallery-card" data-removable-card>
+                <div class="admin-gallery-card__media">Photo</div>
+                <div class="admin-gallery-card__body">
+                  <div>
+                    <h4 class="admin-gallery-card__title">Reception desk</h4>
+                    <div class="admin-gallery-card__caption">Gallery card</div>
+                  </div>
+                  <div class="admin-actions">
+                    <button class="admin-mini-button admin-mini-button--danger" type="button" data-remove-card>Delete</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

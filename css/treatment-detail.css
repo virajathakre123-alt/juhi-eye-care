@@ -1,0 +1,132 @@
+/* Treatment detail page */
+.treatment-detail-page {
+  background: #ffffff;
+}
+
+.treatment-detail-main {
+  background: #ffffff;
+}
+
+.treatment-detail-container {
+  width: min(100% - 1.6rem, 395px);
+  margin-inline: auto;
+}
+
+.treatment-detail-hero {
+  padding: 2rem 0 1rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(180deg, var(--blue-50), #ffffff 78%);
+}
+
+.treatment-detail-eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--blue-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.treatment-detail-hero h1 {
+  margin: 0;
+  font-size: 1.95rem;
+  line-height: 1.08;
+}
+
+.treatment-detail-lead {
+  max-width: 44rem;
+  margin-top: 0.85rem;
+  color: #3d5871;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.treatment-detail-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.treatment-detail-media__tile {
+  min-height: 124px;
+  border-radius: 10px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)),
+    linear-gradient(135deg, #d9ddc8, #7b9b73 48%, #2b5b57);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.treatment-detail-content {
+  padding: 1rem 0 2rem;
+}
+
+.treatment-detail-card {
+  margin-top: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 1rem 1rem 1.05rem;
+  box-shadow: 0 12px 30px rgba(0, 107, 169, 0.06);
+}
+
+.treatment-detail-card h2 {
+  margin-bottom: 0.55rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.treatment-detail-card p {
+  margin: 0;
+  color: #36556d;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.treatment-detail-cta {
+  margin-top: 1rem;
+  border-radius: 20px;
+  background: #0b79c9;
+  color: #ffffff;
+  padding: 1.1rem;
+  box-shadow: 0 16px 34px rgba(0, 107, 169, 0.18);
+}
+
+.treatment-detail-cta__eyebrow,
+.treatment-detail-cta h2 {
+  margin: 0;
+}
+
+.treatment-detail-cta__eyebrow {
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.treatment-detail-cta h2 {
+  margin-top: 0.45rem;
+  font-size: 1.18rem;
+  line-height: 1.32;
+}
+
+.treatment-detail-cta__button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #0b79c9;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+
+.treatment-detail-footer {
+  padding: 0 0 2rem;
+}
+
+.treatment-detail-footer__panel {
+  margin-top: 0;
+  border-radius: 22px;
+}

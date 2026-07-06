@@ -1,0 +1,195 @@
+/* Testimonials page */
+.testimonials-page {
+  background: #ffffff;
+}
+
+.about-main {
+  background: #ffffff;
+  padding-top: 8rem;
+}
+
+.about-container {
+  width: min(100% - 3.2rem, 980px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.about-hero-band {
+  /* hero band removed on testimonials page; kept for other pages if needed */
+  display: none;
+}
+
+.about-footer-panel {
+  margin-top: 1.6rem;
+}
+
+.about-testimonial-section {
+  margin-bottom: 1.6rem;
+  padding-top: 1.2rem;
+}
+
+.about-testimonial-section--standalone {
+  padding: 0 0 1.6rem;
+}
+
+.about-testimonial-intro {
+  margin-bottom: 1.2rem;
+}
+
+.about-testimonial-intro h1 {
+  margin: 0;
+  color: #111111;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.about-testimonial-intro p {
+  margin: 0;
+  color: #111111;
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
+.testimonial-slider-card {
+  border: 1px solid #8ab9db;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: 0 16px 36px rgba(0, 107, 169, 0.08);
+  overflow: hidden;
+}
+
+.testimonial-slider-card__viewport {
+  display: flex;
+  transition: transform 240ms ease;
+}
+
+.testimonial-slide-card {
+  flex: 0 0 100%;
+  padding: 1.4rem 1.2rem 1.2rem;
+}
+
+.testimonial-slide-card h2 {
+  margin: 0;
+  color: #111111;
+  font-size: 1.18rem;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 0.65rem;
+}
+
+.testimonial-slide-card__divider {
+  width: 48px;
+  height: 2px;
+  margin: 0 auto 0.8rem;
+  border-radius: 999px;
+  background: #006ba9;
+}
+
+.testimonial-slide-card__treatment {
+  margin: 0 0 0.95rem;
+  color: #4a5965;
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.testimonial-slide-card__quote {
+  margin: 0.9rem 0 1rem;
+  color: #2f3a45;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.testimonial-slide-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(0, 107, 169, 0.14);
+}
+
+.testimonial-slide-card__photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 107, 169, 0.18);
+}
+
+.testimonial-slide-card__footer strong {
+  display: block;
+  color: #111111;
+  font-size: 0.78rem;
+}
+
+.testimonial-slide-card__rating {
+  margin-top: 0.2rem;
+  color: #f4b840;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+
+.testimonial-slide-card__footer p {
+  margin: 0.2rem 0 0;
+  color: #4a5965;
+  font-size: 0.72rem;
+}
+
+.patient-quote-card__avatar {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #ffcf70 0%, #2d9f8f 38%, #0b6db3 100%);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.testimonial-slider-card__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0 1rem 1rem;
+}
+
+.testimonial-slider-card__arrow {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid #9bc8e6;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #006ba9;
+  font-size: 1rem;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.testimonial-slider-card__arrow:hover,
+.testimonial-slider-card__arrow:focus-visible {
+  background: #edf8ff;
+  transform: translateY(-1px);
+}
+
+.patient-quote-card__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.patient-quote-card__dots span,
+.patient-quote-card__dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  background: #d1e9ff;
+  padding: 0;
+}
+
+.patient-quote-card__dots .is-active {
+  background: #006ba9;
+}

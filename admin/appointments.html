@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments | Juhi Eye Care Admin</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+  <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-appointments.css">
+  <link rel="stylesheet" href="../css/appointments.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/appointments.js" defer></script>
+</head>
+<body>
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-sidebar__header">
+          <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+        </div>
+        <nav class="admin-sidebar__nav" data-admin-nav>
+          <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+          <a class="admin-sidebar__link is-active" href="appointments.html">Today's Appointments</a>
+          <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+          <a class="admin-sidebar__link" href="availability.html">Availability</a>
+          <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+          <a class="admin-sidebar__link" href="settings.html">Settings</a>
+          <a class="admin-sidebar__link" href="login.html">Logout</a>
+        </nav>
+        <div class="admin-sidebar__footer">Manage appointments and exports.</div>
+      </aside>
+
+      <div class="admin-content">
+        <header class="admin-topbar">
+          <div class="admin-topbar__title">
+            <div>
+              <h1>Today's Appointments</h1>
+              <p class="admin-muted">View confirmed appointments for the selected date.</p>
+            </div>
+          </div>
+            <div class="admin-topbar__actions">
+            <a class="admin-button admin-button--secondary" href="dashboard.html">← Back</a>
+            </div>
+        </header>
+
+        <main class="admin-page-main">
+          <div class="admin-container">
+            <div class="admin-row" style="align-items:center;gap:12px;margin-bottom:12px;">
+              <div>
+                <label for="filter-date" class="admin-muted">Date</label>
+                <input id="filter-date" class="admin-input" type="date" value="2026-06-21" />
+              </div>
+              <div style="flex:1;">
+                <label for="search-box" class="admin-muted">Search</label>
+                <div class="search-wrap">
+                  <input id="search-box" class="admin-input" type="search" placeholder="Search Patient Name / Phone" />
+                  <button class="search-icon" aria-hidden="true">🔍</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table" id="appointments-table">
+                <thead>
+                  <tr><th>Time</th><th>Patient</th><th>Phone</th><th>Treatment</th><th>Status</th><th>View</th></tr>
+                </thead>
+                <tbody>
+                  <tr data-date="2026-06-21" data-name="Prajakta Patil" data-phone="989004321" data-email="prajakta@example.com" data-treatment="Dry Eye Consultation" data-message="Has been using eye drops" data-time="10:00 AM">
+                    <td>10:00 AM</td>
+                    <td>Ms. Prajakta Patil</td>
+                    <td>98XXXX4321</td>
+                    <td>Dry Eye Consultation</td>
+                    <td><span class="admin-badge admin-badge--confirmed">Confirmed</span></td>
+                    <td><button class="admin-mini-button" data-view>View</button></td>
+                  </tr>
+
+                  <tr data-date="2026-06-21" data-name="Rakesh Kulkarni" data-phone="979991189" data-email="rakesh@example.com" data-treatment="Cataract Follow-up" data-message="Post-op notes" data-time="10:45 AM">
+                    <td>10:45 AM</td>
+                    <td>Mr. Rakesh Kulkarni</td>
+                    <td>97XXXX1189</td>
+                    <td>Cataract Follow-up</td>
+                    <td><span class="admin-badge admin-badge--confirmed">Completed</span></td>
+                    <td><button class="admin-mini-button" data-view>View</button></td>
+                  </tr>
+
+                  <tr data-date="2026-06-21" data-name="Gauri Deshmukh" data-phone="998005673" data-email="gauri@example.com" data-treatment="LASIK Evaluation" data-message="First-time patient" data-time="11:30 AM">
+                    <td>11:30 AM</td>
+                    <td>Ms. Gauri Deshmukh</td>
+                    <td>99XXXX5673</td>
+                    <td>LASIK Evaluation</td>
+                    <td><span class="admin-badge admin-badge--confirmed">Confirmed</span></td>
+                    <td><button class="admin-mini-button" data-view>View</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Empty state -->
+            <div id="empty-state" style="display:none; text-align:center; padding:36px;">
+              <img src="../assets/images/empty-state-appointment.png" alt="No appointments" style="max-width:220px;opacity:0.95;margin:0 auto 12px;" />
+              <h3>No Appointments Today</h3>
+              <p class="admin-muted">Enjoy a calm day. Your schedule is clear.</p>
+            </div>
+
+            <!-- Drawer / bottom sheet + overlay -->
+            <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+            <div id="appt-drawer" class="appt-drawer" aria-hidden="true">
+              <div class="drawer-inner">
+                <button class="drawer-close" aria-label="Close">×</button>
+                <h3 id="drawer-name">Patient Name</h3>
+                <div class="drawer-meta">
+                  <div><strong>Phone</strong><div id="drawer-phone" class="admin-muted"></div></div>
+                  <div><strong>Email</strong><div id="drawer-email" class="admin-muted"></div></div>
+                  <div><strong>Treatment</strong><div id="drawer-treatment" class="admin-muted"></div></div>
+                  <div><strong>Date & Time</strong><div id="drawer-datetime" class="admin-muted"></div></div>
+                </div>
+                <div class="drawer-section">
+                  <h4>Patient Message</h4>
+                  <p id="drawer-message" class="admin-muted"></p>
+                </div>
+                <div class="drawer-section">
+                  <h4>Doctor Notes</h4>
+                  <textarea id="drawer-notes" class="admin-textarea" placeholder="Add notes for this appointment"></textarea>
+                </div>
+                <div class="drawer-actions">
+                  <button class="admin-button admin-button--primary" id="mark-complete">Mark Completed</button>
+                  <button class="admin-button admin-button--danger" id="cancel-appointment">Cancel Appointment</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

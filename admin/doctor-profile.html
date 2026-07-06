@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Management | Juhi Eye Care Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+    <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-doctor.css">
+  <link rel="stylesheet" href="../css/admin-profile-photo.css">
+  <link rel="stylesheet" href="../css/admin-treatments.css">
+  <link rel="stylesheet" href="../css/admin-gallery.css">
+  <link rel="stylesheet" href="../css/doctor-profile.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/doctor-profile.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+                <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link is-active" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html">Logout</a>
+      </nav>
+      <div class="admin-sidebar__footer">Edit doctor introduction, image, treatments and gallery.</div>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+                    <div>
+            <h1>Profile Management</h1>
+            <p class="admin-muted">Manage introduction, qualifications, treatments, gallery and contact info.</p>
+          </div>
+        </div>
+        <div class="admin-topbar__actions">
+          <div class="admin-tag admin-tag--soft">Edit mode</div>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <section class="admin-card">
+            <h3 class="admin-section-header">About the Doctor</h3>
+            <p class="admin-muted">Only editable fields are shown here with the current values pre-filled.</p>
+            <form id="profile-form" class="admin-form-grid">
+              <div class="admin-field">
+                <label for="doctor-name">Doctor name</label>
+                <input class="admin-input" id="doctor-name" type="text" value="Dr. Juhi Dhokne" />
+              </div>
+              <div class="admin-field">
+                <label for="doctor-role">Title</label>
+                <input class="admin-input" id="doctor-role" type="text" value="MBBS | MS Ophthalmology (Gold Medalist)" />
+              </div>
+              <div class="admin-field admin-field--full">
+                <label for="doctor-intro">Introduction</label>
+                <textarea class="admin-textarea" id="doctor-intro">Dr. Juhi is a trained eye surgeon with an MBBS and MS in ophthalmology. With advanced fellowship training in cornea and external eye diseases, she focuses on careful diagnosis and patient-first treatment.</textarea>
+              </div>
+            </form>
+          </section>
+
+          <section class="admin-two-up">
+            <article class="admin-card admin-form-card">
+              <h3 class="admin-form-card__title">Profile Photo</h3>
+              <p class="admin-help">Update the portrait shown across the site with a single, guided upload flow.</p>
+              <div class="profile-photo-panel">
+                <div class="profile-photo-card">
+                  <div class="profile-photo-display">
+                    <img id="current-profile-photo" src="../assets/images/profile-placeholder.png" alt="Current profile photo" />
+                  </div>
+                  <div class="profile-photo-card__meta">
+                    <h4>Current profile photo</h4>
+                    <p class="admin-help">A compact card preview for the public profile.</p>
+                  </div>
+                </div>
+                <div class="admin-photo-actions">
+                  <label class="admin-button admin-button--primary admin-button--file">
+                    Change Photo
+                    <input id="photo-input" type="file" accept="image/*" hidden />
+                  </label>
+                </div>
+                <div id="photo-preview" class="admin-photo-frame">
+                  <div class="admin-photo-frame__empty">Choose a photo to preview</div>
+                </div>
+                <div id="photo-actions" class="admin-photo-toolbar hidden">
+                  <button id="photo-save" type="button" class="admin-button admin-button--primary">Save Photo</button>
+                  <span class="admin-help">Square crop preview ready to save.</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="admin-card">
+              <h3 class="admin-section-header">Qualifications & Expertise</h3>
+              <div class="admin-field">
+                <label for="quals-input">Qualifications</label>
+                <textarea id="quals-input" class="admin-textarea">MBBS
+MS (Ophthalmology)
+FAEH - Cornea
+Cataract, cornea, refractive, dry eye</textarea>
+              </div>
+            </article>
+          </section>
+
+          <section class="admin-card">
+            <h3 class="admin-section-header">Treatments</h3>
+            <p class="admin-muted">Manage active treatments that appear on the public site.</p>
+            <div class="admin-actions admin-actions--inline">
+              <button id="add-treatment" type="button" class="admin-button admin-button--secondary">Add treatment</button>
+            </div>
+            <div id="treatments-grid" class="admin-list-grid"></div>
+          </section>
+
+          <section class="admin-card">
+            <h3 class="admin-section-header">Gallery</h3>
+            <p class="admin-help">Choose an image, crop it, assign a treatment, and save it in one quick flow.</p>
+            <div class="admin-gallery-controls">
+              <label class="admin-button admin-button--primary admin-button--file">
+                Add Gallery Image
+                <input id="gallery-input" type="file" accept="image/*" hidden />
+              </label>
+            </div>
+            <div class="admin-gallery-stage">
+              <div id="gallery-preview" class="admin-photo-frame admin-photo-frame--compact">
+                <div class="admin-photo-frame__empty">Choose an image to preview</div>
+              </div>
+              <div id="gallery-form" class="admin-gallery-form hidden">
+                <label class="admin-field" for="gallery-treatment">
+                  <span>Treatment</span>
+                  <select id="gallery-treatment" class="admin-input">
+                    <option>Cataract Surgery</option>
+                    <option>Cornea Care</option>
+                    <option>Dry Eye Treatment</option>
+                    <option>Refractive Surgery</option>
+                    <option>PDEK</option>
+                    <option>Medical Retina Care</option>
+                    <option>Anti-VEGF Treatment</option>
+                    <option>Laser Treatment</option>
+                  </select>
+                </label>
+                <button id="gallery-save" type="button" class="admin-button admin-button--primary">Save Image</button>
+              </div>
+            </div>
+            <div id="gallery-grid" class="admin-gallery-grid"></div>
+          </section>
+
+          <section class="admin-card">
+            <h3 class="admin-section-header">Contact Information</h3>
+            <div class="admin-form-grid">
+              <div class="admin-field">
+                <label for="contact-phone">Phone</label>
+                <input id="contact-phone" class="admin-input" type="text" value="+91 90000 00000" />
+              </div>
+              <div class="admin-field">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" class="admin-input" type="email" value="info@juhieyecare.com" />
+              </div>
+              <div class="admin-field" style="grid-column:1/-1;">
+                <label for="contact-address">Address</label>
+                <textarea id="contact-address" class="admin-textarea">123 Clinic Street, Pune, MH</textarea>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="admin-sticky-footer">
+          <div class="admin-sticky-footer__content">
+            <button id="save-profile" class="admin-button admin-button--primary" type="button">Save Changes</button>
+            <span id="save-status" class="admin-muted">All changes saved</span>
+          </div>
+        </div>
+        <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
+

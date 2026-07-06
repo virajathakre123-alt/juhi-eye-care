@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Juhi Eye Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <div class="desktop-navbar-slot" data-navbar-include="navbar.html"></div>
+
+    <header class="site-header home-header">
+      <div class="home-container header-inner">
+        <a class="brand home-brand" href="index.html" aria-label="Dr. Juhi Dhokne home">
+          <span class="home-brand-mark" aria-hidden="true"></span>
+          <span>Dr. Juhi Dhokne</span>
+        </a>
+        <button class="nav-toggle home-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span></button>
+        <nav class="site-nav home-nav" aria-label="Primary navigation" data-site-nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" data-nav-link href="index.html">Home</a></li>
+            <li><a class="nav-link" data-nav-link href="about.html">About</a></li>
+            <li><a class="nav-link" data-nav-link href="gallery.html">Gallery</a></li>
+            <li class="home-menu-treatment">
+              <button class="nav-link nav-link--treatment" type="button" aria-expanded="false" aria-controls="mobile-treatment-menu" data-treatment-toggle>
+                Treatment <span aria-hidden="true">›</span>
+              </button>
+              <div class="home-treatment-submenu" id="mobile-treatment-menu" data-treatment-menu>
+                <a href="treatment-detail.html">Cataract Surgery</a>
+                <a href="treatment-detail.html">Cornea Care</a>
+                <a href="treatment-detail.html">Dry Eye Treatment</a>
+                <a href="treatment-detail.html">Refractive Surgery</a>
+                <a href="treatment-detail.html">PDEK (Corneal Transplant)</a>
+                <a href="treatment-detail.html">Medical Retina Care</a>
+                <a href="treatment-detail.html">Anti-VEGF Treatment</a>
+                <a href="treatment-detail.html">Laser Treatment (Photocoagulation)</a>
+              </div>
+            </li>
+            <li><a class="nav-link" data-nav-link href="testimonials.html">Patient Testimonial</a></li>
+            <li><a class="nav-link" data-nav-link href="faq.html">FAQ's</a></li>
+            <li><a class="nav-link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+          <p class="home-nav-contact">Phone: +91 XXXXX XXXXX<br>Email: clinic@email.com<br>Clinic Address: [Clinic Name]</p>
+          <div class="home-menu-actions" aria-label="Menu quick actions">
+            <a class="home-pill" href="contact.html">Contact Us</a>
+            <a class="home-pill home-pill--primary" href="appointment.html">Book Appointment <span aria-hidden="true">→</span></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="contact-main">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <div class="container contact-container">
+          <p class="contact-eyebrow">Contact us</p>
+          <h1 id="contact-title">Reach the clinic with confidence and calm.</h1>
+          <p class="contact-lead">If you have a question, want to book a visit, or need help choosing the right treatment, the clinic team can guide you with simple next steps.</p>
+        </div>
+      </section>
+
+      <section class="contact-cards-section" aria-labelledby="contact-cards-title">
+        <div class="container contact-container">
+          <h2 id="contact-cards-title" class="sr-only">Contact information cards</h2>
+          <div class="contact-cards-grid">
+            <article class="contact-info-card contact-info-card--address">
+              <p class="contact-info-card__eyebrow">Clinic address</p>
+              <h3>Juhi Eye Care</h3>
+              <p>Main Clinic Road,<br>Pune, Maharashtra</p>
+            </article>
+
+            <article class="contact-info-card contact-info-card--phone">
+              <p class="contact-info-card__eyebrow">Phone</p>
+              <h3><a href="tel:+910000000000">+91 00000 00000</a></h3>
+              <p>Call for appointment help, directions, or treatment queries.</p>
+            </article>
+
+            <article class="contact-info-card contact-info-card--email">
+              <p class="contact-info-card__eyebrow">Email</p>
+              <h3><a href="mailto:hello@juhieyecare.com">hello@juhieyecare.com</a></h3>
+              <p>We usually respond as soon as possible during clinic hours.</p>
+            </article>
+
+            <article class="contact-info-card contact-info-card--timing">
+              <p class="contact-info-card__eyebrow">Consultation timings</p>
+              <h3>Mon-Sat, 10:00 AM-6:00 PM</h3>
+              <p>Emergency assistance can be requested through the contact form below.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section" aria-labelledby="contact-form-title">
+        <div class="container contact-container contact-form-layout">
+          <div class="contact-form-panel card">
+            <p class="contact-section-eyebrow">Inquiry form</p>
+            <h2 id="contact-form-title">Send a message to the clinic</h2>
+            <form class="contact-form" data-form>
+              <label class="contact-field">
+                <span class="sr-only">Full Name</span>
+                <input type="text" name="name" placeholder="Full Name" autocomplete="name" required>
+              </label>
+
+              <label class="contact-field">
+                <span class="sr-only">Phone Number</span>
+                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required>
+              </label>
+
+              <label class="contact-field">
+                <span class="sr-only">Email</span>
+                <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+              </label>
+
+              <label class="contact-field contact-field--textarea">
+                <span class="sr-only">Message</span>
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
+              </label>
+
+              <button class="contact-form__submit button button--primary" type="submit">Send Inquiry</button>
+              <p class="form-status" aria-live="polite" data-form-status></p>
+            </form>
+          </div>
+
+          <aside class="contact-side-panel card card--quiet">
+            <p class="contact-section-eyebrow">What to expect</p>
+            <h2>We’ll reply with a clear next step.</h2>
+            <ul class="contact-check-list">
+              <li>Appointment guidance based on your concern.</li>
+              <li>Practical notes for the first visit.</li>
+              <li>Support if you need directions or timing help.</li>
+              <li>Calm, direct answers from the clinic team.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="contact-hours-section" aria-labelledby="hours-title">
+        <div class="container contact-container">
+          <div class="contact-hours-panel">
+            <div>
+              <p class="contact-section-eyebrow">Clinic timings</p>
+              <h2 id="hours-title">Consultation hours and visit rhythm</h2>
+            </div>
+            <div class="contact-hours-grid" role="list">
+              <div class="contact-hours-item" role="listitem"><strong>Monday-Friday</strong><span>10:00 AM - 6:00 PM</span></div>
+              <div class="contact-hours-item" role="listitem"><strong>Saturday</strong><span>10:00 AM - 4:00 PM</span></div>
+              <div class="contact-hours-item" role="listitem"><strong>Sunday</strong><span>Closed</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-map-section" aria-labelledby="map-title">
+        <div class="container contact-container">
+          <div class="contact-map-panel">
+            <div class="contact-map-panel__intro">
+              <p class="contact-section-eyebrow">Map</p>
+              <h2 id="map-title">Clinic location</h2>
+            </div>
+            <div class="contact-map-frame">
+              <iframe
+                title="Juhi Eye Care clinic location on Google Maps"
+                src="https://www.google.com/maps?q=Juhi%20Eye%20Care%20Pune&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-emergency-banner" aria-labelledby="emergency-title">
+        <div class="container contact-container">
+          <div class="contact-emergency-banner__panel">
+            <p class="contact-emergency-banner__eyebrow">Need urgent guidance?</p>
+            <h2 id="emergency-title">For sudden vision loss, severe pain, or an eye injury, contact the clinic right away.</h2>
+            <a class="contact-emergency-banner__button" href="appointment.html">Book Appointment</a>
+          </div>
+        </div>
+      </section>
+      <div data-footer-include="footer.html"></div>
+    </main>
+  </div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Appointment Settings | Juhi Eye Care Admin</title>
+  <link rel="stylesheet" href="../css/admin-global.css">
+  <link rel="stylesheet" href="../css/admin-navbar.css">
+  <link rel="stylesheet" href="../css/admin-sidebar.css">
+  <link rel="stylesheet" href="../css/admin-appointment-settings.css">
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/appointment-settings.js" defer></script>
+</head>
+<body class="admin-page">
+  <div class="admin-backdrop" data-admin-backdrop></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="admin-sidebar__header">
+        <button class="admin-sidebar__close" type="button" data-sidebar-close aria-label="Close sidebar">×</button>
+      </div>
+      <nav class="admin-sidebar__nav" data-admin-nav>
+        <a class="admin-sidebar__link" href="dashboard.html">Dashboard</a>
+        <a class="admin-sidebar__link" href="appointments.html">Today's Appointments</a>
+        <a class="admin-sidebar__link" href="appointment-requests.html">Appointment Requests</a>
+        <a class="admin-sidebar__link" href="availability.html">Availability</a>
+        <a class="admin-sidebar__link" href="doctor-profile.html">Profile Management</a>
+        <a class="admin-sidebar__link" href="settings.html">Settings</a>
+        <a class="admin-sidebar__link" href="login.html" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="admin-content">
+      <header class="admin-topbar">
+        <div class="admin-topbar__title">
+          <div>
+            <h1>Appointment Settings</h1>
+            <p class="admin-muted">Control booking behaviour and limits</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-page-main">
+        <div class="admin-container">
+          <form id="appointment-form" class="admin-card admin-form-card">
+            <div class="admin-form-grid">
+              <div class="admin-field">
+                <label for="slot-duration">Slot Duration</label>
+                <select id="slot-duration" class="admin-input">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option selected>30</option>
+                </select>
+              </div>
+
+              <div class="admin-field"><label for="max-per-day">Maximum Appointments Per Day</label><input id="max-per-day" class="admin-input" type="number" value="40"></div>
+              <div class="admin-field"><label for="cancel-window">Cancellation Window (hours)</label><input id="cancel-window" class="admin-input" type="number" value="24"></div>
+
+              <div class="admin-field" style="grid-column:1/-1; display:flex;gap:12px;align-items:center;">
+                <label class="admin-list-item" style="margin:0;"><input type="checkbox" id="require-approval"> Require Manual Approval</label>
+                <label class="admin-list-item" style="margin:0;"><input type="checkbox" id="allow-same-day" checked> Allow Same-Day Booking</label>
+              </div>
+            </div>
+
+            <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px;">
+              <button id="save-appointment" type="button" class="admin-button admin-button--primary">Save Appointment Settings</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

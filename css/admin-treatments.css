@@ -1,0 +1,19 @@
+@import url("admin-global.css");
+
+/* Mobile tweaks for treatments page */
+@media (max-width: 767px) {
+	.admin-two-up {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.admin-form-card {
+		padding: 14px;
+	}
+
+	.admin-list-card {
+		padding: 12px;
+		border-radius: 12px;
+	}
+}
